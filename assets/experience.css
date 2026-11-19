@@ -1,0 +1,79 @@
+.experience-chapter {
+  padding-block: clamp(2.1rem, 4.6vw, 4rem);
+  border-top: 1px solid var(--line);
+}
+
+.chapter-heading {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  margin-bottom: clamp(1.3rem, 3vw, 2rem);
+}
+
+.chapter-heading h2 {
+  font-size: clamp(1.65rem, 4.1vw, 3.3rem);
+  line-height: 1.13;
+  letter-spacing: -.055em;
+}
+.chapter-heading-text { min-width: 0; }
+.chapter-status {
+  margin-top: .45rem;
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+.chapter-period {
+  display: inline-block;
+  color: var(--accent);
+  font: 650 .54em/1.3 var(--look);
+  letter-spacing: -.02em;
+  white-space: nowrap;
+}
+
+.school-heading, .school-title {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+}
+
+.school-heading { margin-bottom: 1rem; }
+.school-heading h3 { font-size: clamp(1.05rem, 2.1vw, 1.45rem); line-height: 1.3; }
+.school-logo { flex: none; object-fit: contain; }
+
+.study-year + .study-year { margin-top: 2.8rem; padding-top: 1.6rem; border-top: 1px solid var(--line); }
+.study-year h3 { margin-bottom: .95rem; font-size: clamp(1.25rem, 2.9vw, 2rem); letter-spacing: -.045em; }
+.study-year h3 span { color: var(--muted); font-size: .7em; white-space: nowrap; }
+.term + .term { margin-top: 1.65rem; }
+.term h4 { margin: 0 0 .7rem; font: 650 .93rem/1.4 var(--look); color: var(--accent); }
+
+.activity-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 12rem), 1fr));
+  gap: 1.15rem 1rem;
+}
+.experience-tile { position: relative; min-width: 0; }
+.experience-tile > img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: var(--quiet);
+}
+.experience-tile > .flag-transition { object-fit: contain; background: #f1e5df; }
+.experience-tile figcaption { margin-top: .5rem; font-size: .94rem; letter-spacing: -.02em; line-height: 1.4; }
+.experience-tile figcaption strong span { color: var(--accent); }
+.experience-project-link { text-decoration: none; }
+.experience-project-link:hover { text-decoration: underline; }
+.experience-project-link::after { content: ""; position: absolute; inset: 0; }
+
+@media (max-width: 600px) {
+  .experience .year-nav { gap: .38rem; }
+  .experience .year-nav a { min-height: 36px; padding-inline: .6rem; font-size: .85rem; }
+  .activity-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .95rem .65rem; }
+  .experience-tile figcaption { font-size: .86rem; }
+  .experience-tile .school-title { flex-wrap: wrap; gap: .25rem .5rem; }
+}
+
+@media (max-width: 420px) {
+  .chapter-heading > .school-logo { width: 38px; height: 38px; }
+}
