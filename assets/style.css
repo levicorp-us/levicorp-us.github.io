@@ -186,6 +186,7 @@ html { scroll-padding-top: 6rem; }
   color: var(--muted);
 }
 .language div { display: flex; gap: .4rem; align-items: baseline; }
+.language .language-study { flex-basis: 100%; }
 .language dt { font-weight: 700; color: var(--text); }
 .page-intro {
   padding-block: clamp(2.8rem, 7.5vw, 6.25rem) clamp(1.7rem, 3.8vw, 3rem);
