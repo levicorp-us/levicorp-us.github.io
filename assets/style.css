@@ -219,6 +219,7 @@ html { scroll-padding-top: 6rem; }
 .project:target { outline: 2px solid var(--accent); outline-offset: 4px; }
 .project figure { position: relative; background: var(--quiet); }
 .project figure img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+.project figure img.clicker-screenshot, .experience-tile > img.clicker-screenshot { object-fit: contain; }
 .project figcaption {
   display: table;
   position: absolute;
