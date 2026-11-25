@@ -65,6 +65,7 @@
 .experience-project-link { text-decoration: none; }
 .experience-project-link:hover { text-decoration: underline; }
 .experience-project-link::after { content: ""; position: absolute; inset: 0; }
+.experience-document-link { position: relative; z-index: 1; }
 
 @media (max-width: 600px) {
   .experience .year-nav { gap: .38rem; }
